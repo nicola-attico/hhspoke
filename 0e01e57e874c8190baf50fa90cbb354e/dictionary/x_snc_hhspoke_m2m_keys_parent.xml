@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Hconnector M2m Keys Parent" max_length="40" name="x_snc_hhspoke_m2m_keys_parent" sizeclass="0" type="collection"/>
+</database>

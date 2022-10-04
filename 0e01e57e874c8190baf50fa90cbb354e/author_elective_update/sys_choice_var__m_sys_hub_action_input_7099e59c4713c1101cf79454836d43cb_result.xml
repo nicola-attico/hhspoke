@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="result" table="var__m_sys_hub_action_input_7099e59c4713c1101cf79454836d43cb" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>result</element>
+            <name>var__m_sys_hub_action_input_7099e59c4713c1101cf79454836d43cb</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-06-01 13:40:15</sys_created_on>
+            <sys_id>8fc7ac8a8773811049d18777dabb3545</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>result</sys_name>
+            <sys_package display_value="Global" source="global">global</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="hhspoke">0e01e57e874c8190baf50fa90cbb354e</sys_scope>
+            <sys_update_name>sys_choice_var__m_sys_hub_action_input_7099e59c4713c1101cf79454836d43cb_result</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-06-01 13:40:15</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>result</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>-- None --</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_7099e59c4713c1101cf79454836d43cb</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-02 11:26:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c199e59c4713c1101cf79454836d43e0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-02 11:26:53</sys_updated_on>
+            <value/>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>result</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>success</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_7099e59c4713c1101cf79454836d43cb</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-02 11:26:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8999e59c4713c1101cf79454836d43e0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-02 11:26:53</sys_updated_on>
+            <value>success</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>result</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>failt</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_7099e59c4713c1101cf79454836d43cb</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-02 11:26:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4199e59c4713c1101cf79454836d43e1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-02 11:26:53</sys_updated_on>
+            <value>failt</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_vtable">
+    <sys_script_vtable action="DELETE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <cache_isolation_level>USER</cache_isolation_level>
+        <cache_strategy>CACHE_BY_QUERY</cache_strategy>
+        <cache_ttl>0</cache_ttl>
+        <name>Balances</name>
+        <script><![CDATA[(function executeQuery(v_table, v_query) {
+
+    try {
+
+        var re = /^account\.sys_id=/
+        var re2 = /^account_id=/
+
+        var gr = new GlideRecord('x_snc_hhspoke_account');
+
+        if (re.test(v_query.getEncodedQuery())) {
+            sys_id = v_query.getEncodedQuery().split("=")[1]
+            gr.query("sys_id", sys_id); //returns glide list instead of record
+            loadBalances(gr)
+        } else if (re2.test(v_query.getEncodedQuery())) {
+            account_id = v_query.getEncodedQuery().split("=")[1]
+            gr.query("account_id", account_id);
+            loadBalances(gr)
+        } else {
+            var gr = new GlideRecord('x_snc_hhspoke_account');
+            gr.query();
+            loadBalances(gr)
+        }
+    } catch (e) {
+        gs.addInfoMessage(e)
+    }
+
+
+    function loadBalances(accounts) {
+        try {
+            var inputs = {};
+            inputs['accounts'] = accounts; // List
+
+            var result = sn_fd.FlowAPI.getRunner().action('x_snc_hhspoke.queryaccountbalances2').inForeground().withInputs(inputs).run();
+            var outputs = result.getOutputs();
+
+            var out = outputs['out'];
+            //gs.addInfoMessage(out)
+            var res = JSON.parse(out);
+
+            for (j = 0; j < res.resp.length; j++) {
+                for (i = 0; i < res.resp[j][1].tokens.length; i++) {
+
+                    var t = new GlideRecord('x_snc_hhspoke_token');
+                    t.get('token_id', res.resp[j][1].tokens[i].tokenId)
+                    var a = new GlideRecord('x_snc_hhspoke_account')
+                    a.get('account_id', res.resp[j][0])
+
+                    if (t) {
+
+                        row = {
+                            sys_id: gs.generateGUID(),
+                            account: a.sys_id,
+                            account_id: a.account_id,
+                            name: a.name,
+                            token: t.sys_id,
+                            token_id: t.token_id,
+                            balance: res.resp[j][1].tokens[i].balance,
+                            decimals: res.resp[j][1].tokens[i].decimals,
+                            fmt_balance: new Utils().add_comma(res.resp[j][1].tokens[i].balance, Number(res.resp[j][1].tokens[i].decimals))
+                        }
+
+                        v_table.addRow(row)
+                    }
+                }
+            }
+
+        } catch (ex) {
+            var message = ex.getMessage();
+            gs.error(message);
+        }
+    }
+
+})(v_table, v_query);]]></script>
+        <sys_class_name>sys_script_vtable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-14 05:34:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>35c0e4a3871c0dd0baf50fa90cbb35b6</sys_id>
+        <sys_mod_count>99</sys_mod_count>
+        <sys_name>Balances</sys_name>
+        <sys_package display_value="hhspoke" source="x_snc_hhspoke">0e01e57e874c8190baf50fa90cbb354e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhspoke">0e01e57e874c8190baf50fa90cbb354e</sys_scope>
+        <sys_update_name>sys_script_vtable_35c0e4a3871c0dd0baf50fa90cbb35b6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-04 17:19:20</sys_updated_on>
+        <table>x_snc_hhspoke_st_balances</table>
+    </sys_script_vtable>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="hhspoke">0e01e57e874c8190baf50fa90cbb354e</application>
+        <file_path/>
+        <instance_id>77d51ed5db7f415849eac597059619bd</instance_id>
+        <instance_name>hederarest</instance_name>
+        <name>sys_script_vtable_35c0e4a3871c0dd0baf50fa90cbb35b6</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_vtable"&gt;&lt;sys_script_vtable action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;advanced&gt;false&lt;/advanced&gt;&lt;cache_isolation_level&gt;USER&lt;/cache_isolation_level&gt;&lt;cache_strategy&gt;CACHE_BY_QUERY&lt;/cache_strategy&gt;&lt;cache_ttl&gt;0&lt;/cache_ttl&gt;&lt;name&gt;Balances&lt;/name&gt;&lt;script&gt;&lt;![CDATA[(function executeQuery(v_table, v_query) {
+
+    try {
+
+        var re = /^account\.sys_id=/
+        var re2 = /^account_id=/
+
+        var gr = new GlideRecord('x_snc_hhspoke_account');
+
+        if (re.test(v_query.getEncodedQuery())) {
+            sys_id = v_query.getEncodedQuery().split("=")[1]
+            gr.query("sys_id", sys_id); //returns glide list instead of record
+            loadBalances(gr)
+        } else if (re2.test(v_query.getEncodedQuery())) {
+            account_id = v_query.getEncodedQuery().split("=")[1]
+            gr.query("account_id", account_id);
+            loadBalances(gr)
+        } else {
+            var gr = new GlideRecord('x_snc_hhspoke_account');
+            gr.query();
+            loadBalances(gr)
+        }
+    } catch (e) {
+        gs.addInfoMessage(e)
+    }
+
+
+    function loadBalances(accounts) {
+        try {
+            var inputs = {};
+            inputs['accounts'] = accounts; // List
+
+            var result = sn_fd.FlowAPI.getRunner().action('x_snc_hhspoke.queryaccountbalances2').inForeground().withInputs(inputs).run();
+            var outputs = result.getOutputs();
+
+            var out = outputs['out'];
+            //gs.addInfoMessage(out)
+            var res = JSON.parse(out);
+
+            for (j = 0; j &lt; res.resp.length; j++) {
+                for (i = 0; i &lt; res.resp[j][1].tokens.length; i++) {
+
+                    var t = new GlideRecord('x_snc_hhspoke_token');
+                    t.get('token_id', res.resp[j][1].tokens[i].tokenId)
+                    var a = new GlideRecord('x_snc_hhspoke_account')
+                    a.get('account_id', res.resp[j][0])
+
+                    if (t) {
+
+                        row = {
+                            sys_id: gs.generateGUID(),
+                            account: a.sys_id,
+                            account_id: a.account_id,
+                            name: a.name,
+                            token: t.sys_id,
+                            token_id: t.token_id,
+                            balance: res.resp[j][1].tokens[i].balance,
+                            decimals: res.resp[j][1].tokens[i].decimals,
+                            fmt_balance: new Utils().add_comma(res.resp[j][1].tokens[i].balance, Number(res.resp[j][1].tokens[i].decimals))
+                        }
+
+                        v_table.addRow(row)
+                    }
+                }
+            }
+
+        } catch (ex) {
+            var message = ex.getMessage();
+            gs.error(message);
+        }
+    }
+
+})(v_table, v_query);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_vtable&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-14 05:34:59&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;35c0e4a3871c0dd0baf50fa90cbb35b6&lt;/sys_id&gt;&lt;sys_mod_count&gt;99&lt;/sys_mod_count&gt;&lt;sys_name&gt;Balances&lt;/sys_name&gt;&lt;sys_package display_value="hhspoke" source="x_snc_hhspoke"&gt;0e01e57e874c8190baf50fa90cbb354e&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="hhspoke"&gt;0e01e57e874c8190baf50fa90cbb354e&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_vtable_35c0e4a3871c0dd0baf50fa90cbb35b6&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-03-04 17:19:20&lt;/sys_updated_on&gt;&lt;table&gt;x_snc_hhspoke_st_balances&lt;/table&gt;&lt;/sys_script_vtable&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1781616711</payload_hash>
+        <record_name>Balances</record_name>
+        <reverted_from/>
+        <source>92f62c868773811049d18777dabb357c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-01 13:42:54</sys_created_on>
+        <sys_id>8e68e44e8773811049d18777dabb35f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1811f81453f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-01 13:42:54</sys_updated_on>
+        <type>Remote Table</type>
+        <update_guid>4e68e44e8a73811011e24622976eaff0</update_guid>
+        <update_guid_history>4e68e44e8a73811011e24622976eaff0:1781616711</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-24 08:37:04</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_vtable">sys_script_vtable</sys_db_object>
+        <sys_id>31b4150ac8554864bd7bcb9de5cbb184</sys_id>
+        <sys_metadata>35c0e4a3871c0dd0baf50fa90cbb35b6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Balances</sys_name>
+        <sys_package display_value="hhspoke" source="x_snc_hhspoke">0e01e57e874c8190baf50fa90cbb354e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="hhspoke">0e01e57e874c8190baf50fa90cbb354e</sys_scope>
+        <sys_scope_delete display_value="">116cc33b159748d7b0350f18b26ffb59</sys_scope_delete>
+        <sys_update_name>sys_script_vtable_35c0e4a3871c0dd0baf50fa90cbb35b6</sys_update_name>
+        <sys_update_version display_value="sys_script_vtable_35c0e4a3871c0dd0baf50fa90cbb35b6">8e68e44e8773811049d18777dabb35f0</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-24 08:37:04</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

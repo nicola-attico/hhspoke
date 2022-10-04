@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="order" table="var__m_sys_hub_action_input_2d5b25104753c1101cf79454836d4307" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>order</element>
+            <name>var__m_sys_hub_action_input_2d5b25104753c1101cf79454836d4307</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-06-01 13:39:23</sys_created_on>
+            <sys_id>9697ec4a8773811049d18777dabb3597</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>order</sys_name>
+            <sys_package display_value="Global" source="global">global</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="hhspoke">0e01e57e874c8190baf50fa90cbb354e</sys_scope>
+            <sys_update_name>sys_choice_var__m_sys_hub_action_input_2d5b25104753c1101cf79454836d4307_order</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-06-01 13:39:23</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>order</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>desc</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_2d5b25104753c1101cf79454836d4307</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-02 11:41:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>67dc29504753c1101cf79454836d437e</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-02 11:41:25</sys_updated_on>
+            <value>desc</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>order</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>asc</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_2d5b25104753c1101cf79454836d4307</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-02 11:41:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2fdc29504753c1101cf79454836d437e</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-02 11:41:25</sys_updated_on>
+            <value>asc</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

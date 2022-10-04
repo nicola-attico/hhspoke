@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="DELETE">
+        <choices>testnet / mainnet-public</choices>
+        <description/>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_snc_hhspoke.mirror</name>
+        <read_roles/>
+        <suffix>mirror</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-02-22 12:43:08</sys_created_on>
+        <sys_id>7b35a606dbb9851074ee4d76059619e4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_snc_hhspoke.mirror</sys_name>
+        <sys_package display_value="hhspoke" source="x_snc_hhspoke">0e01e57e874c8190baf50fa90cbb354e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhspoke">0e01e57e874c8190baf50fa90cbb354e</sys_scope>
+        <sys_update_name>sys_properties_7b35a606dbb9851074ee4d76059619e4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-02-28 10:42:48</sys_updated_on>
+        <type>string</type>
+        <value>testnet</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="DELETE" query="documentkey=7b35a606dbb9851074ee4d76059619e4"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="hhspoke">0e01e57e874c8190baf50fa90cbb354e</application>
+        <file_path/>
+        <instance_id>77d51ed5db7f415849eac597059619bd</instance_id>
+        <instance_name>hederarest</instance_name>
+        <name>sys_properties_7b35a606dbb9851074ee4d76059619e4</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices>testnet / mainnet-public</choices><description/><ignore_cache>true</ignore_cache><is_private>false</is_private><name>x_snc_hhspoke.mirror</name><read_roles/><suffix>mirror</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-02-22 12:43:08</sys_created_on><sys_id>7b35a606dbb9851074ee4d76059619e4</sys_id><sys_mod_count>1</sys_mod_count><sys_name>x_snc_hhspoke.mirror</sys_name><sys_package display_value="hhspoke" source="x_snc_hhspoke">0e01e57e874c8190baf50fa90cbb354e</sys_package><sys_policy/><sys_scope display_value="hhspoke">0e01e57e874c8190baf50fa90cbb354e</sys_scope><sys_update_name>sys_properties_7b35a606dbb9851074ee4d76059619e4</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-02-28 10:42:48</sys_updated_on><type>string</type><value>testnet</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=7b35a606dbb9851074ee4d76059619e4"/></record_update>]]></payload>
+        <payload_hash>1440301416</payload_hash>
+        <record_name>x_snc_hhspoke.mirror</record_name>
+        <reverted_from/>
+        <source>92f62c868773811049d18777dabb357c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-01 13:42:52</sys_created_on>
+        <sys_id>e968e44e8773811049d18777dabb3573</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1811f813cfe0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-01 13:42:52</sys_updated_on>
+        <type>System Property</type>
+        <update_guid>a968e44e287381103077d46e932ad573</update_guid>
+        <update_guid_history>a968e44e287381103077d46e932ad573:1440301416</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-24 08:31:07</sys_created_on>
+        <sys_db_object display_value="" name="sys_properties">sys_properties</sys_db_object>
+        <sys_id>322141a6ddc341689462ae82f00e3390</sys_id>
+        <sys_metadata>7b35a606dbb9851074ee4d76059619e4</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_hhspoke.mirror</sys_name>
+        <sys_package display_value="hhspoke" source="x_snc_hhspoke">0e01e57e874c8190baf50fa90cbb354e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="hhspoke">0e01e57e874c8190baf50fa90cbb354e</sys_scope>
+        <sys_scope_delete display_value="">116cc33b159748d7b0350f18b26ffb59</sys_scope_delete>
+        <sys_update_name>sys_properties_7b35a606dbb9851074ee4d76059619e4</sys_update_name>
+        <sys_update_version display_value="sys_properties_7b35a606dbb9851074ee4d76059619e4">e968e44e8773811049d18777dabb3573</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-24 08:31:07</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
