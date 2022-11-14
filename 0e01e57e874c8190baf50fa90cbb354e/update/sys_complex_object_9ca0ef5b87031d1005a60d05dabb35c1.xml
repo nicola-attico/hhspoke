@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FDd8a0ef5b8e031d10b8575bd0732cb4c1</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>0e01e57e874c8190baf50fa90cbb354e</scope_name>
+        <serialized_content>{"FlowDesigner:FDd8a0ef5b8e031d10b8575bd0732cb4c1":{"$COCollectionField":[{"Object":{}}],"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FDd8a0ef5b8e031d10b8575bd0732cb4c1.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"a1cfc1a1-e491-4faf-8837-3f816ba63c73\",\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"messages\",\"mandatory\":\"false\",\"child_name\":\"messages_child0\",\"uiUniqueId\":\"157a567f-3cd5-46ca-bf16-cd3820ec8b5d\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDd8a0ef5b8e031d10b8575bd0732cb4c1\",\"child_label\":\"messages_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceType\":\"step\",\"sourceUiUniqueId\":\"b35ee02e-72cf-474a-bc93-3cff66bd57ef\",\"hint\":null,\"uiType\":\"array.object\",\"child_defaultValue\":\"\",\"child_type\":\"object\",\"order\":\"4\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"4e943897-234e-4bc8-b8d0-39297b7220c8\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-14 13:44:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9ca0ef5b87031d1005a60d05dabb35c1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FDd8a0ef5b8e031d10b8575bd0732cb4c1</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="hhspoke" source="x_snc_hhspoke">0e01e57e874c8190baf50fa90cbb354e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhspoke">0e01e57e874c8190baf50fa90cbb354e</sys_scope>
+        <sys_update_name>sys_complex_object_9ca0ef5b87031d1005a60d05dabb35c1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-14 13:44:16</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+</record_update>
